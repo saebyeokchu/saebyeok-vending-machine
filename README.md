@@ -2,9 +2,9 @@
 
 **The vending machine operates through the following steps**
 1. User Input : User select beverage and payment method among card and cash
-
+```
   1.1 Error handling : check invalid payment method, out of stock beverage
-  
+```
 2. Process payment : Process payment method
    
   2.1 If cash
