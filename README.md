@@ -22,4 +22,4 @@
 
 3. Dispense beverage : Dispense the beverage and update the inventory
 
-![image](https://github.com/user-attachments/assets/4813cb07-a810-4465-b862-cae34cddbdb2)
+![image](https://github.com/user-attachments/assets/d660ee32-d213-4e9b-bcb2-88973e797f13)
