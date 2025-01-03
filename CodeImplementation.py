@@ -1,12 +1,12 @@
 class VendingMachine :
     def __init__(self):
         self.beverages = {
-            "Cola": {"price": 1100, "stock": 10},
-            "Water": {"price": 600, "stock": 15},
-            "Coffee": {"price": 700, "stock": 8}
+            "cola": {"price": 1100, "stock": 10},
+            "water": {"price": 600, "stock": 15},
+            "coffee": {"price": 700, "stock": 8}
         }
         self.accepted_cash = [100, 500, 1000, 5000, 10000]
-        self.accpeted_payment_method = ['card','cash']
+        self.accpeted_payment_method = ["card","cash"]
 
     def showMenus(self) :
         for name, info in self.beverages.items() :
@@ -37,13 +37,12 @@ class VendingMachine :
         else :
             print("\nNot a vaild payment option. Please Try again.")
     
-    def processCard(self,beverage):
+    def processCard(self,price):
         print("check if card is valid")
         print("Process payment with card")
     
-    def processCash(self, beverage):
+    def processCash(self, price):
         total = 0
-        price = self.beverages[beverage].price
         while total < price:
             try:
                 amount = int(input(f"\nInsert cash (Accepted: {self.accepted_cash}): "))
@@ -58,7 +57,7 @@ class VendingMachine :
         if change > 0:
             print(f"Change returned: {change} KRW")
         
-    def dispense_beverage(self, beverage):
+    def dispenseBeverage(self, beverage):
         print(f"\n{beverage} is dispensing...")
         self.beverages[beverage]["stock"] -= 1
         print("Enjoy your drink!")
@@ -71,16 +70,17 @@ class VendingMachine :
             beverage = self.checkChoice()
             if beverage :
                 payment = self.checkPaymentMethod()
+                price = self.beverages[beverage]['price']
             else :
-                break
+                continue
          
             #step2. process payment
             if payment == 'card' :
-                self.processCard(beverage)
+                self.processCard(price)
             elif payment == 'cash' : 
-                self.processCash(beverage)
+                self.processCash(price)
             else :
-                break
+                continue
                 
             #step3. Dispense beverage
             self.dispenseBeverage(beverage)
