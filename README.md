@@ -18,7 +18,8 @@
     2.2.1 Validate the card if it is chargable
     
       2.2.1.1 If not return with internal error
-      ```
+ ```
+
 3. Dispense beverage : Dispense the beverage and update the inventory
 
 ![image](https://github.com/user-attachments/assets/4813cb07-a810-4465-b862-cae34cddbdb2)
