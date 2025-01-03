@@ -7,6 +7,7 @@ class VendingMachine :
         }
         self.accepted_cash = [100, 500, 1000, 5000, 10000]
         self.accpeted_payment_method = ["card","cash"]
+        self.vending_machine_change = 200
 
     def showMenus(self) :
         for name, info in self.beverages.items() :
@@ -47,15 +48,22 @@ class VendingMachine :
             try:
                 amount = int(input(f"\nInsert cash (Accepted: {self.accepted_cash}): "))
                 if amount in self.accepted_cash:
-                    total += amount
-                    print(f"Total inserted: {total} KRW")
+                    #check change of vending machine
+                    if self.vending_machine_change > amount + total - price : 
+                        total += amount
+                        print(f"Total inserted: {total} 원")
+                    else :
+                        print("Not enough change to return")
                 else:
                     print("Invalid amount of money. Try again.")
             except ValueError:
                 print("Invalid input. Please insert cash.")
+
         change = total - price
-        if change > 0:
-            print(f"Change returned: {change} KRW")
+        if change > 0 :
+            self.vending_machine_change -= change
+            print(f"Change {change} 원 will be returned")
+
         
     def dispenseBeverage(self, beverage):
         print(f"\n{beverage} is dispensing...")
