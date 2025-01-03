@@ -1,6 +1,5 @@
-##Mechanism diagram document##
-
-The vending machine operates through the following steps
+##Mechanism diagram document
+**The vending machine operates through the following steps**
 1. User Input : User select beverage and payment method among card and cash
   1.1 Error handling : check invalid payment method, out of stock beverage, insufficent amount of payment for beverage
 2. Process payment : Process payment method
