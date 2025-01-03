@@ -10,9 +10,6 @@
   2.2 If card : 
     2.2.1 Validate the card if it is chargable
       2.2.1.1 If not return with internal error
-3. Process beverage : Check if required beverage dispensible
-  3.1 If cash : Return any change if applicable
-  3.2 If card : Process the payment
-4. Dispense beverage : Dispense the beverage and update the inventory
+3. Dispense beverage : Dispense the beverage and update the inventory
 
-![image](https://github.com/user-attachments/assets/e0c52491-5a8d-435e-b243-998f590152d9)
+![image](https://github.com/user-attachments/assets/4813cb07-a810-4465-b862-cae34cddbdb2)
