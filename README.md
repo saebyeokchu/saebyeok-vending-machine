@@ -1,4 +1,4 @@
-##Mechanism diagram document
+## Mechanism diagram document
 
 **The vending machine operates through the following steps**
 1. User Input : User select beverage and payment method among card and cash
